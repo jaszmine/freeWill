@@ -1,6 +1,11 @@
+# pip3 install pydub simpleaudio
+
 import time
 import sys
 import random
+from pydub import AudioSegment
+from pydub.playback import play
+import threading
 
 # get ready for the greatest code you've ever seen absolutely LITTERED with sprinkles of joy (comments)
 
@@ -47,14 +52,14 @@ the_actual_gospel = [
     (53.0, "Last Christmas, I gave you my heaaaaaart"),
     (57.0, "But the very next day, you gaaaaaave meeeee awaaaaaaaaaaay"),
     (62.0, "This yearrr,    to save - me  -  from   -   tears"),
-    (66.0, "I'll give it to someone special, specialllll"),
+    (66.0, "I'll give it to someone special, speciallllllllll"),
     (68.5, ""),
     (71.0, "A face on a lover with a fire in his heart"),
     (75.0, "A man under cover but you tore him apart"),
     (80.0, "Maybe ... next year ........... "),
     (84.0, "I'll give it to someone"),
-    (87.0, "I'll give it to someone special"),
-    (89.0, "speciAaAaalll .....    "),
+    (87.0, "I'll give it to someone ssssspecialllll"),
+    (90.0, "speciAaAaalll .....    "),
     (93.0, "someoneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"),
     (97.0, "     "),
 ]
@@ -80,6 +85,21 @@ COLOR_UPDATE_DELAY = 0.5  # Controls how frequently the tree colors flicker (Slo
 
 # characters of the lyric updates per tick
 CHARACTERS_PER_FRAME = 1  # Typing speed (characters per LYRIC_TICK_DELAY)
+
+# load and trim audio at 2:42 (162 seconds)
+try:
+    # print("Loading and trimming audio from 2:42...")
+    full_audio = AudioSegment.from_wav("wamalama.wav")
+    trimmed_audio = full_audio[162.5*1000:]  # convert seconds to milliseconds
+    audio_loaded = True
+except Exception as e:
+    print(f" - Audio file error: {e}")
+    print("- Continuing without audio...")
+    audio_loaded = False
+
+# play audio in a separate thread
+def play_audio(audio_segment):
+    play(audio_segment)
 
 # clears console screen and resets the cursor.
 def clear_console():
@@ -133,13 +153,21 @@ def print_outro(colors, reset_color):
 # main timing and rendering logic
 def run_animation(tree_data, lyrics_data, colors, reset_color, lyric_tick_delay, color_update_delay, chars_per_frame):
     
-    # state vars
+    # start audio at exactly 2:42/3 ish
+    if audio_loaded:
+        print("🎵 Starting audio from EXACTLY 2:42... NOW!")
+        # play audio in a separate thread so animation continues
+        audio_thread = threading.Thread(target=play_audio, args=(trimmed_audio,))
+        audio_thread.daemon = True
+        audio_thread.start()
+    
+    start_time = time.time()
+    
+    # state & color vars
     start_time = time.time()
     lyric_index = 0
     char_index = 0  
     displayed_lyrics = []
-    
-    # color state vars
     last_color_update_time = 0.0
     current_colored_tree = generate_colored_tree(tree_data, colors, reset_color) # initial color generation
     

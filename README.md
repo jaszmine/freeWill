@@ -12,9 +12,11 @@ your move zuckerberg.
 - so i made it work lol
 
 ## how to use
-- start playing music video around 2:40
-- run script when they say "A crowded room, friends with tired eyes" (around 2:42)
-- [the gospel](https://youtu.be/E8gmARGvPlI?si=VLj5rYfP2dm_YBGh&t=160)
+1) `pip install pydub simpleaudio` (or `pip3` if ur on a mac)
+2) in the terminal, `python xmas.py` (or `python3` lol)
+OR
+1) start playing music video around 2:40 on youtube --> [the gospel](https://youtu.be/E8gmARGvPlI?si=VLj5rYfP2dm_YBGh&t=160)
+2) run script when they say "A crowded room, friends with tired eyes" (around 2:42)
 
 ˖ ᡣ𐭩 ⊹ ࣪ ✩°｡ ౨ৎ˚₊ ✧.* 𐙚⋆.˚ ˏˋ°•*⁀➷ ⋆.ೃ࿔*:･★ 𓏲⋆. 𖦹 ₊˚ 𓋜˚ ༘ ೀ⋆｡˚ 𓇼𓏲*ੈ✩‧₊˚♡ 𓆝 𓆟 𓆞 𓆝 𓆟 ｡𖦹°‧
 
