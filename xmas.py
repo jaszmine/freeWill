@@ -1,5 +1,3 @@
-# pip3 install pydub simpleaudio
-
 import time
 import sys
 import random
@@ -35,22 +33,22 @@ tree = [
 the_actual_gospel = [
     # start at 2:42 in music video
     (0.0, "A crowded room, friends with tired eyes"),
-    (4.0, "I'm hiding from you and your soul of ice"),
+    (5.0, "I'm hiding from you and your soul of ice"),
     (8.7, "My god I thought you were someone to rely onh"),
-    (12.0, "Me? ........... I guess I was a shoulder to cry on"),
+    (12.5, "Me? ........... I guess I was a shoulder to cry on"),
     (15.5, ""),
     (17.0, "A   face on a lover with a fire in his heart      "),
-    (22.0, "A man under cover but you toooooooooooooooore meeeee aaapaaaaaaaaart"),
+    (22.0, "A man under cover but you toooooooooooooooore meeeee aaapaaaaaaaaaaaaaaart"),
     (28.0, "ooooooooohhhhhhhhhh"),
     (30.0, "Now I've found a real love you'll never fool me again"),
     (34.8, ""),
     (35.9, "Last Christmas, I gave you my heart"),
     (39.0, "But the \033[4mvery\033[0m \033[4mnext\033[0m \033[4mday\033[0m, you gave it away, u gave it away :("),
     (44.0, "Thiiiiiis yearrrrr, to save me from tears"),
-    (48.0, "I'll give it to someone special,        specialll"),
+    (48.0, "I'll give it to someone special,          specialll"),
     (51.0, ""),
     (53.0, "Last Christmas, I gave you my heaaaaaart"),
-    (57.0, "But the very next day, you gaaaaaave meeeee awaaaaaaaaaaay"),
+    (57.0, "But the very next day, you gaaaaaaaaaave meeeee awaaaaaaaaaaay"),
     (62.0, "This yearrr,    to save - me  -  from   -   tears"),
     (66.0, "I'll give it to someone special, speciallllllllll"),
     (68.5, ""),
@@ -60,7 +58,7 @@ the_actual_gospel = [
     (84.0, "I'll give it to someone"),
     (87.0, "I'll give it to someone ssssspecialllll"),
     (90.0, "speciAaAaalll .....    "),
-    (93.0, "someoneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"),
+    (94.0, "someoneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"),
     (97.0, "     "),
 ]
 
@@ -88,7 +86,6 @@ CHARACTERS_PER_FRAME = 1  # Typing speed (characters per LYRIC_TICK_DELAY)
 
 # load and trim audio at 2:42 (162 seconds)
 try:
-    # print("Loading and trimming audio from 2:42...")
     full_audio = AudioSegment.from_wav("wamalama.wav")
     trimmed_audio = full_audio[162.5*1000:]  # convert seconds to milliseconds
     audio_loaded = True
@@ -153,9 +150,8 @@ def print_outro(colors, reset_color):
 # main timing and rendering logic
 def run_animation(tree_data, lyrics_data, colors, reset_color, lyric_tick_delay, color_update_delay, chars_per_frame):
     
-    # start audio at exactly 2:42/3 ish
+    # start audio at exactly 2:42 ish
     if audio_loaded:
-        print("🎵 Starting audio from EXACTLY 2:42... NOW!")
         # play audio in a separate thread so animation continues
         audio_thread = threading.Thread(target=play_audio, args=(trimmed_audio,))
         audio_thread.daemon = True
@@ -224,14 +220,12 @@ def run_animation(tree_data, lyrics_data, colors, reset_color, lyric_tick_delay,
             print() 
             print(current_lyric_text)
             
-            # --- check for end condition ---
             if lyric_index >= len(lyrics_data) and not current_lyric_text:
                 break
             
             # --- wait for next frame (uses the lyric tick delay) ---
             time.sleep(lyric_tick_delay)
 
-    # allow clean exit on Ctrl+C
     except KeyboardInterrupt:
         pass
 

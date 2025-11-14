@@ -2,7 +2,7 @@
 looking to prove python can be just as inefficient as c++? 
 well boy do i have the program for you ♫♩♬ 
 
-i give you: 222 lines of hardcoded 🙌 INNOVATION 👏 <3 <br>
+i give you: 244 lines of hardcoded 🙌 INNOVATION 👏 <3 <br>
 your move zuckerberg.
 
 ## ✨ motivation ✨
