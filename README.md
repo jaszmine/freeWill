@@ -6,7 +6,7 @@ i give you: 244 lines of hardcoded 🙌 INNOVATION 👏 <3 <br>
 your move zuckerberg.
 
 ## ✨ motivation ✨
-- i saw this instagram reel with something similar, but it only showed like the first 10 lines of code
+- i saw this video with something similar, but it only showed like the first 10 lines of code
 - and all the comments were in russian 
 - so i made it work lol
 
