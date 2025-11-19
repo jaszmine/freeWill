@@ -6,8 +6,8 @@ i give you: 244 lines of hardcoded 🙌 INNOVATION 👏 <3 <br>
 your move zuckerberg.
 
 ## ✨ motivation ✨
-- i saw this video with something similar, but it only showed like the first 10 lines of code
-- and all the comments were in russian 
+- i saw this video with something similar, but it only showed like the first 10 lines of code, & the tree was shaped funky, like when have u ever seen a christmas tree that's a literal equilateral triangle
+- also all the comments were in russian 
 - so i made it work lol
 
 ## how to use
