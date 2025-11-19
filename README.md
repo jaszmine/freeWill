@@ -17,7 +17,7 @@ OR
 1) start playing music video around 2:40 on youtube --> [the gospel](https://youtu.be/E8gmARGvPlI?si=VLj5rYfP2dm_YBGh&t=160)
 2) run script when they say "A crowded room, friends with tired eyes" (around 2:42)
 
-˖ ᡣ𐭩 ⊹ ࣪ ✩°｡ ౨ৎ˚₊ ✧.* 𐙚⋆.˚ ˏˋ°•*⁀➷ ⋆.ೃ࿔*:･★ 𓏲⋆. 𖦹 ₊˚ 𓋜˚ ༘ ೀ⋆｡˚ 𓇼𓏲*ੈ✩‧₊˚♡ 𓆝 𓆟 𓆞 𓆝 𓆟 ｡𖦹°‧･★₊˚ ✩°｡౨ৎ˚˖ ᡣ𐭩⊹ ࣪ ｡•*ೃ࿔ 𖦹｡𓇼ೀ⋆.𐙚 ⋆˚♡⊹
+˖ ᡣ𐭩 ⊹ ࣪ ✩°｡ ౨ৎ˚₊ ✧.* 𐙚⋆.˚ ˏˋ°•*⁀➷ ⋆.ೃ࿔*:･★ 𓏲⋆. 𖦹 ₊˚ 𓋜˚ ༘ ೀ⋆｡˚ 𓇼𓏲*ੈ✩‧₊˚♡ 𓆝 𓆟 𓆞 𓆝 𓆟 ｡𖦹°‧･★₊˚ ✩°｡౨ৎ˚˖ ᡣ𐭩⊹
 <br> <br>
 
 
